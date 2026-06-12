@@ -1,0 +1,21 @@
+# Known-good Hermes Desktop config for a Modelfile-tuned Ollama model.
+# Location on Windows: %LOCALAPPDATA%\hermes\config.yaml
+#
+# If "provider: custom" errors in your Hermes build, change it to
+# "provider: ollama-launch" and keep the model name.
+
+model:
+  api_key: ollama
+  base_url: http://127.0.0.1:11434/v1
+  default: gemma4-hermes:12b
+  provider: custom
+  context_length: 64000
+  max_tokens: 8192
+
+toolsets:
+- file
+- terminal
+
+platform_toolsets:
+  cli:
+  - file
